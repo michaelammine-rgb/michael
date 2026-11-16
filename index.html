@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">,
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Student Study Tracker</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <h1>STUDENT STUDY TRACKER</h1>
+            <p>organize your studies and manage assignment</p>
+        </header>
+        <nav>
+            <a href="#dashboard">Dashboard</a>
+            <a href="#timetable">Timetable</a>
+            <a href="#assignment">Assignment</a>
+            <a href="#progress">Progress</a>
+        </nav>
+        <main>
+            <section id="dashboard">
+                <h2>Student Dashboard</h2>
+                <p>Welcome to your study managment system.</p>
+                <div class="dashboard container">
+                    <div class="dashboard-card">
+                        <h3>Total Study Sessions</h3>
+                        <p id="totalSessions">0</p>
+                    </div>
+                    <div class="dashboard-card">
+                        <h3>Total Study Hours</h3>
+                        <p id="totalHours">0</p>
+                    </div>
+                    <div class="dashboard-card">
+                        <h3>Total Assignments</h3>
+                        <p id="totalAssignments">0</p>
+                    </div>
+                    <div class="dashboard-card">
+                      <h3>Completed Assignments</h3>
+                      <p id="completedAssignments">0</p>
+                    </div>
+                    <div class="dashboard-card">
+                        <h3>Pending Assignments</h3>
+                        <p id="pendingAssignments">0</p>
+                    </div>
+                </div>
+            </section>
+            <section id="timetable">
+                <h2>Study Timetable</h2>
+                <form id="studyForm">
+                    <label for="subject">Subject:</label>
+                    <input type="text" id="subject" placeholder="Enter subject" required>
+                    <label for="day">Study day</label>
+                    <select id="day" required>
+                        <option value="">Select day</option>
+                        <option>Monday</option>
+                        <option>Teusday</option>
+                        <option>Wednesday</option>
+                        <option>Thursday</option>
+                        <option>Friday</option>
+                        <option>Saturday</option>
+                        <option>Sunday</option>
+                    </select>
+                    <label for="studyTime">Study Time:</label>
+                    <input type="time" id="studyTime" required>
+                    <button type="submit">Add Study Session</button>
+                </form>
+               <h3>My study Sessions</h3>
+               <ul id="sessionList"></ul>
+            </section>
+            <section id ="assignment">
+                <h2>Assignment Tracker</h2>
+                <form id="assignmentForm">
+                    <label for="assignmentSubject">subject</label>
+                    <input type="text" id="assignmentSubject" placeholder="Enter subject" required>
+                    <label for="deadline">Submission Deadline</label>
+                    <input type="data" id="deadline" required>
+                    <label for="priority" >Priority: </label>
+                    <select id="priority" required>
+                        <option value="high">High</option>
+                        <option value="medium">Medium</option>
+                        <option value="low">Low</option>
+                    </select>
+                    <button type="submit">Add Assignment</button>
+                </form>
+                <h3>My Assignment</h3>
+                <ul id="assignmentList"></ul>
+                <p>Manage your academic assignments here.</p>
+            </section>
+            <section id="progress">
+                <h2>Study Progress</h2>
+                <div class="progress-card">
+                    <h3>Assignment Completion</h3>
+                    <p id="completionPercentage">0%</p>
+                    <div class="progress-bar">
+                        <div id="progressFill"></div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <script src="script.js"></script>
+    </body>
+</html>
